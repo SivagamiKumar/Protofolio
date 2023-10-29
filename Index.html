@@ -1,0 +1,171 @@
+<html>
+<head>
+<title>Web Page</title>
+<style>
+    body{
+        font-family: Arial,sans-serif;
+        margin:0;
+        padding: 0;
+        background-color:rgb(252, 222, 239) ;
+    }
+    header{
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+        padding: 2;
+        position:relative;
+    }
+    .header-content h1{
+        font: size 2.5rem;
+    }
+
+    nav{
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+    }
+    nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    nav ul li{
+        display: inline;
+        margin: 0 20px;
+    }
+    nav ul li a{
+         text-decoration: none;
+         color: #fff;
+    }
+    .section-content{
+        background-color:#fff;
+        padding: 2rem;
+        margin:  1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .profile-picture{
+        width: 100px;
+        height: 100px;
+        border-radius: 75%;
+        object-fit:cover;
+        position: absolute;
+        top:15px;
+        left:75px;
+    }
+    .download-button{
+        background-color: #333;
+        color:#fff;
+        padding: 0.5rem 1rem;
+        text-decoration:none;
+        border-radius:20px;
+        display:inline-block;
+        margin-top: 10px;
+    }
+    .download-button:hover{
+        background-color: goldenrod;
+    }
+    
+    footer{
+        text-align: center;
+        padding: 1ren 0;
+        background-color: #333;
+        color:#fff;
+    }
+    ul{
+        list-style-type: lower-roman;
+        padding-left: 20px;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="pic.jpeg" class="profile-picture">
+            <h1><b><i>SivagamiKumar</i></b></h1>
+            <h2><b>...................</b></h2>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2><i>About me</i></h2>
+            <p><i>Hello Everyone!   This is Sivagami K and i am a  Computer science Student</i></p>
+        </div>
+    </section>
+
+    <section id="Education">
+        <div class="section-content">
+            <h2><i>Education</i></h2>
+            <p><i>Manonmaniam Sundaranar University
+                <br>
+                Govindammal Aditanar College for Womens
+            </i></p>
+        </div>
+    </section>
+            
+
+    <section id="Skills">
+        <div class="section-content">
+            <h2><i>skills</i></h2>
+            <ul><i>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C Programming language</li>
+                <li>C++ Programming language</li>
+                <li>MS Word , Power Point</li></i>
+            </ul>
+        </div>
+    </section>
+
+    <section id="Project">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><i><a href="#">Project 1</a></i></li>
+                <li><i><a href="#">Project 2</a></i></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <center>
+            <div class="section-content">
+                <h2>Resume</h2>
+                <a href="https://docs.google.com/document/d/e/2PACX-1vQw0dNGSVbSj4exbCFXWFTO3Tj1tlsxNE1eiq3xCRRwW0H1cR6Z-U1IOE1oQd-EKA/pub"><button class="download-button">Download</button></a>
+            </div>
+        </center>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 SivagamiKumar</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+            anchor.addEventListener('click',function(e){
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targerElement = document.getElementsById(targetId);
+
+                if(taragetElement){
+                    window.scrollTo({
+                        top:taragetElement.offsetTop,
+                        behavior:'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
